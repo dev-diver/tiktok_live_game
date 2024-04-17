@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok 취향게임</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="head">
+        <h1>TikTok GAME</h1>   
+    </div>
+    <div class="inputFields">
+        <p>라이브 중인 아이디<b>@username</b>로 입력</p>
+        <input type="text" id="uniqueIdInput">
+        <input type="button" id="connectButton" value="connect">
+    </div>
+
+    <table class="splitstatetable">
+        <tr>
+            <td>
+                <pre id="stateText"></pre>
+            </td>
+            <td>
+                <div id="roomStats"></div>
+            </td>
+        </tr>
+    </table>
+
+    <div id="canvas-container">
+        <canvas></canvas>
+    </div>
+    <table class="splitchattable">
+        <tr>
+            <td>
+                <div class="chatcontainer">
+                    <h3 class="containerheader">Chats</h3>
+                </div>
+            </td>
+            <td>
+                <div class="giftcontainer">
+                    <h3 class="containerheader">Gifts</h3>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script src="canvas/Game.js"></script>
+    <script src="canvas/Vector.js"></script>
+    <script src="canvas/Profile.js"></script>
+    <script src="canvas/Team.js"></script>
+    <script src="canvas/setting.js"></script>
+    <script src="canvas/index.js"></script>
+    <script src="connection.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
